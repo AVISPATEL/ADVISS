@@ -39,7 +39,6 @@ public class School_details_service_impl implements School_details_service{
         if(allById.isPresent()){
             return  allById.get();
         }
-
         return null;
     }
 

@@ -17,4 +17,5 @@ public interface School_details_service{
     School_details findAll(int id);
 
 
+
 }
