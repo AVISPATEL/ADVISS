@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
+import java.util.Optional;
 
 @Configuration
 public class School_details_service_impl implements School_details_service{
@@ -31,4 +32,18 @@ public class School_details_service_impl implements School_details_service{
     public void deleteById(int id) {
         schoolRepository.deleteById(id);
     }
+
+    @Override
+    public School_details findAll(int id) {
+        Optional<School_details> allById = Optional.ofNullable(schoolRepository.findAllById(id));
+        if(allById.isPresent()){
+            return  allById.get();
+        }
+
+        return null;
+    }
+
+
+
+
 }

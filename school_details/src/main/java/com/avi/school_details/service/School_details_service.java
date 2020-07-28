@@ -1,8 +1,6 @@
 package com.avi.school_details.service;
 
 import com.avi.school_details.entity.School_details;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,4 +13,8 @@ public interface School_details_service{
     void  save(School_details theSchool);
 
     void  deleteById(int id);
+
+    School_details findAll(int id);
+
+
 }
