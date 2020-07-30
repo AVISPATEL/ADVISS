@@ -35,7 +35,7 @@ public class School_details_service_impl implements School_details_service{
 
     @Override
     public School_details findAll(int id) {
-        Optional<School_details> allById = Optional.ofNullable(schoolRepository.findAllById(id));
+        Optional<School_details> allById = schoolRepository.findAllById(id);
         if(allById.isPresent()){
             return  allById.get();
         }
