@@ -38,7 +38,7 @@ public class School_details_controller {
     @PostMapping("/list")
     public String create(@RequestBody School_details theSchoolDetails){
         schoolDetailsService1.save(theSchoolDetails);
-        return "done";
+        return "created sucessfully";
     }
 
     @PutMapping("/list")
