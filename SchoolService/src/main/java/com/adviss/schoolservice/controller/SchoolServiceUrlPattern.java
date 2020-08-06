@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/school_details")
+@RequestMapping("/schoolDetails")
 public class SchoolServiceUrlPattern {
 
     @Autowired
@@ -20,7 +20,7 @@ public class SchoolServiceUrlPattern {
     }
 
     @GetMapping("/list")
-    public List<SchoolPojoDBMapping> school_details_list(){
+    public List<SchoolPojoDBMapping> schoolDetailsList(){
         List<SchoolPojoDBMapping> all = schoolDetailsService1.findAll();
         return all;
     }

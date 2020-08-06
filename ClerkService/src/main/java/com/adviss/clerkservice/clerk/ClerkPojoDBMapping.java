@@ -1,36 +1,35 @@
 package com.adviss.clerkservice.clerk;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="clerk_details")
+@Table(name="clerkDetails")
 public class ClerkPojoDBMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
-    @Column(name="clerk_name")
-    private String clerk_name;
+    @Column(name="clerkName")
+    private String clerkName;
 
-    @Column(name="clerk_address")
-    private String clerk_address;
+    @Column(name="clerkAddress")
+    private String clerkAddress;
 
-    @Column(name="clerk_contact")
-    private long clerk_contact;
+    @Column(name="clerkContact")
+    private long clerkContact;
 
-    @Column(name="clerk_aadhar_no")
-    private long clerk_aadhar_no;
+    @Column(name="clerkAadharNo")
+    private long clerkAadharNo;
 
-    @Column(name="d_O_b")
+    @Column(name="DOB")
     @JsonFormat(pattern="yyyy-MM-dd")
-    private Date clerk_birthdate;
+    private Date clerkBirthdate;
 
-    @Column(name="clerk_email_id")
-    private String clerk_email_id;
+    @Column(name="clerkEmailId")
+    private String clerkEmailId;
 
     public int getId() {
         return id;
@@ -40,78 +39,78 @@ public class ClerkPojoDBMapping {
         this.id = id;
     }
 
-    public String getClerk_name() {
-        return clerk_name;
+    public String getClerkName() {
+        return clerkName;
     }
 
-    public void setClerk_name(String clerk_name) {
-        this.clerk_name = clerk_name;
+    public void setClerkName(String clerkName) {
+        this.clerkName = clerkName;
     }
 
-    public String getClerk_address() {
-        return clerk_address;
+    public String getClerkAddress() {
+        return clerkAddress;
     }
 
-    public void setClerk_address(String clerk_address) {
-        this.clerk_address = clerk_address;
+    public void setClerkAddress(String clerkAddress) {
+        this.clerkAddress = clerkAddress;
     }
 
-    public long getClerk_contact() {
-        return clerk_contact;
+    public long getClerkContact() {
+        return clerkContact;
     }
 
-    public void setClerk_contact(long clerk_contact) {
-        this.clerk_contact = clerk_contact;
+    public void setClerkContact(long clerkContact) {
+        this.clerkContact = clerkContact;
     }
 
-    public long getClerk_aadhar_no() {
-        return clerk_aadhar_no;
+    public long getClerkAadharNo() {
+        return clerkAadharNo;
     }
 
-    public void setClerk_aadhar_no(long clerk_aadhar_no) {
-        this.clerk_aadhar_no = clerk_aadhar_no;
+    public void setClerkAadharNo(long clerkAadharNo) {
+        this.clerkAadharNo = clerkAadharNo;
     }
 
-    public Date getClerk_birthdate() {
-        return clerk_birthdate;
+    public Date getClerkBirthdate() {
+        return clerkBirthdate;
     }
 
-    public void setClerk_birthdate(Date clerk_birthdate) {
-        this.clerk_birthdate = clerk_birthdate;
+    public void setClerkBirthdate(Date clerkBirthdate) {
+        this.clerkBirthdate = clerkBirthdate;
     }
 
-    public String getClerk_email_id() {
-        return clerk_email_id;
+    public String getClerkEmailId() {
+        return clerkEmailId;
     }
 
-    public void setClerk_email_id(String clerk_email_id) {
-        this.clerk_email_id = clerk_email_id;
+    public void setClerkEmailId(String clerkEmailId) {
+        this.clerkEmailId = clerkEmailId;
     }
 
     public ClerkPojoDBMapping(){
 
     }
 
-    public ClerkPojoDBMapping(int id, String clerk_name, String clerk_address, long clerk_contact, long clerk_aadhar_no, Date clerk_birthdate, String clerk_email_id) {
+    public ClerkPojoDBMapping(int id, String clerkName, String clerkAddress, long clerkContact, long clerkAadharNo, Date clerkBirthdate, String clerkEmailId) {
         this.id = id;
-        this.clerk_name = clerk_name;
-        this.clerk_address = clerk_address;
-        this.clerk_contact = clerk_contact;
-        this.clerk_aadhar_no = clerk_aadhar_no;
-        this.clerk_birthdate = clerk_birthdate;
-        this.clerk_email_id = clerk_email_id;
+        this.clerkName = clerkName;
+        this.clerkAddress = clerkAddress;
+        this.clerkContact = clerkContact;
+        this.clerkAadharNo = clerkAadharNo;
+        this.clerkBirthdate = clerkBirthdate;
+        this.clerkEmailId = clerkEmailId;
     }
 
     @Override
     public String toString() {
-        return "Clerk_details{" +
+        return "ClerkDetails{" +
                 "id=" + id +
-                ", clerk_name='" + clerk_name + '\'' +
-                ", clerk_address='" + clerk_address + '\'' +
-                ", clerk_contact=" + clerk_contact +
-                ", clerk_aadhar_no=" + clerk_aadhar_no +
-                ", clerk_birthdate=" + clerk_birthdate +
-                ", clerk_email_id='" + clerk_email_id + '\'' +
+                ", clerkName='" + clerkName + '\'' +
+                ", clerkAddress='" + clerkAddress + '\'' +
+                ", clerkContact=" + clerkContact +
+                ", clerkAadharNo=" + clerkAadharNo +
+                ", clerkBirthdate=" + clerkBirthdate +
+                ", clerkEmailId='" + clerkEmailId + '\'' +
                 '}';
     }
 }

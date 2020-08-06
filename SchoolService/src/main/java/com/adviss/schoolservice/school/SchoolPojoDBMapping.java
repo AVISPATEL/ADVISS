@@ -1,46 +1,44 @@
 package com.adviss.schoolservice.school;
 
-
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="school_details")
+@Table(name="schoolDetails")
 public class SchoolPojoDBMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
-    @Column(name="school_name")
-    private String school_name;
+    @Column(name="schoolName")
+    private String schoolName;
 
-    @Column(name="school_address")
+    @Column(name="schoolAddress")
     private String address;
 
-    @Column(name="school_code")
-    private int school_code;
+    @Column(name="schoolCode")
+    private int schoolCode;
 
-    @Column(name="school_contact")
-    private long school_contact;
+    @Column(name="schoolContact")
+    private long schoolContact;
 
-    @Column(name="principal_name")
-    private String principal_name;
+    @Column(name="principalName")
+    private String principalName;
 
-    @Column(name="principal_contact")
-    private long principal_contact;
+    @Column(name="principalContact")
+    private long principalContact;
 
-    @Column(name="principal_aadhar_no")
-    private long aadhar_no;
+    @Column(name="principalAadharNo")
+    private long aadharNo;
 
-    @Column(name="user_name")
+    @Column(name="userName")
     private String username;
 
     @Column(name="password")
     private String password;
 
-    @Column(name="school_email_id")
-    private String email_id;
+    @Column(name="schoolEmailId")
+    private String emailId;
 
     public SchoolPojoDBMapping(){
 
@@ -54,12 +52,12 @@ public class SchoolPojoDBMapping {
         this.id = id;
     }
 
-    public String getSchool_name() {
-        return school_name;
+    public String getSchoolName() {
+        return schoolName;
     }
 
-    public void setSchool_name(String school_name) {
-        this.school_name = school_name;
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
     }
 
     public String getAddress() {
@@ -70,44 +68,44 @@ public class SchoolPojoDBMapping {
         this.address = address;
     }
 
-    public int getSchool_code() {
-        return school_code;
+    public int getSchoolCode() {
+        return schoolCode;
     }
 
-    public void setSchool_code(int school_code) {
-        this.school_code = school_code;
+    public void setSchoolCode(int schoolCode) {
+        this.schoolCode = schoolCode;
     }
 
-    public long getSchool_contact() {
-        return school_contact;
+    public long getSchoolContact() {
+        return schoolContact;
     }
 
-    public void setSchool_contact(long school_contact) {
-        this.school_contact = school_contact;
+    public void setSchoolContact(long schoolContact) {
+        this.schoolContact = schoolContact;
     }
 
-    public String getPrincipal_name() {
-        return principal_name;
+    public String getPrincipalName() {
+        return principalName;
     }
 
-    public void setPrincipal_name(String principal_name) {
-        this.principal_name = principal_name;
+    public void setPrincipalName(String principalName) {
+        this.principalName = principalName;
     }
 
-    public long getPrincipal_contact() {
-        return principal_contact;
+    public long getPrincipalContact() {
+        return principalContact;
     }
 
-    public void setPrincipal_contact(long principal_contact) {
-        this.principal_contact = principal_contact;
+    public void setPrincipalContact(long principalContact) {
+        this.principalContact = principalContact;
     }
 
-    public long getAadhar_no() {
-        return aadhar_no;
+    public long getAadharNo() {
+        return aadharNo;
     }
 
-    public void setAadhar_no(long aadhar_no) {
-        this.aadhar_no = aadhar_no;
+    public void setAadharNo(long aadharNo) {
+        this.aadharNo = aadharNo;
     }
 
     public String getUsername() {
@@ -126,41 +124,41 @@ public class SchoolPojoDBMapping {
         this.password = password;
     }
 
-    public String getEmail_id() {
-        return email_id;
+    public String getEmailId() {
+        return emailId;
     }
 
-    public void setEmail_id(String email_id) {
-        this.email_id = email_id;
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
     }
 
-    public SchoolPojoDBMapping(int id, String school_name, String address, int school_code, long school_contact, String principal_name, long principal_contact, long aadhar_no, String username, String password, String email_id) {
+    public SchoolPojoDBMapping(int id, String schoolName, String address, int schoolCode, long schoolContact, String principalName, long principalContact, long aadharNo, String username, String password, String emailId) {
         this.id=id;
-        this.school_name = school_name;
+        this.schoolName = schoolName;
         this.address = address;
-        this.school_code = school_code;
-        this.school_contact = school_contact;
-        this.principal_name = principal_name;
-        this.principal_contact = principal_contact;
-        this.aadhar_no = aadhar_no;
+        this.schoolCode = schoolCode;
+        this.schoolContact = schoolContact;
+        this.principalName = principalName;
+        this.principalContact = principalContact;
+        this.aadharNo = aadharNo;
         this.username = username;
         this.password = password;
-        this.email_id = email_id;
+        this.emailId = emailId;
     }
 
     @Override
     public String toString() {
-        return "School_details{" +
-                "school_name='" + school_name + '\'' +
+        return "SchoolDetails{" +
+                "schoolName='" + schoolName + '\'' +
                 ", address='" + address + '\'' +
-                ", school_code=" + school_code +
-                ", school_contact=" + school_contact +
-                ", principal_name='" + principal_name + '\'' +
-                ", principal_contact=" + principal_contact +
-                ", aadhar_no=" + aadhar_no +
+                ", schoolCode=" + schoolCode +
+                ", schoolContact=" + schoolContact +
+                ", principalName='" + principalName + '\'' +
+                ", principalContact=" + principalContact +
+                ", aadharNo=" + aadharNo +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", email_id='" + email_id + '\'' +
+                ", emailId='" + emailId + '\'' +
                 '}';
     }
 }

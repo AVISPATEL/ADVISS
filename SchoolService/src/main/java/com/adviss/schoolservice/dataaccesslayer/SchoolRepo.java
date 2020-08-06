@@ -8,7 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface SchoolRepo extends CrudRepository<SchoolPojoDBMapping,Integer> {
-
-
     Optional<SchoolPojoDBMapping> findAllById(int id);
 }

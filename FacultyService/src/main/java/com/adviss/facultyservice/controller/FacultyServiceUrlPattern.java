@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/faculty_details")
+@RequestMapping("/facultyDetails")
 public class FacultyServiceUrlPattern {
     @Autowired
     private FacultyServiceInterface facultyDetailsService;

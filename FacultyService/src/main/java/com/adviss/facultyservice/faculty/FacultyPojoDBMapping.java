@@ -6,31 +6,31 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="faculty_details")
+@Table(name="facultyDetails")
 public class FacultyPojoDBMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
-    @Column(name="faculty_name")
-    private String faculty_name;
+    @Column(name="facultyName")
+    private String facultyName;
 
-    @Column(name="faculty_address")
-    private String faculty_address;
+    @Column(name="facultyAddress")
+    private String facultyAddress;
 
-    @Column(name="faculty_contact")
-    private long faculty_contact;
+    @Column(name="facultyContact")
+    private long facultyContact;
 
-    @Column(name="faculty_aadhar_no")
-    private long faculty_aadhar_no;
+    @Column(name="facultyAadharNo")
+    private long facultyAadharNo;
 
-    @Column(name="d_O_b")
+    @Column(name="dOB")
     @JsonFormat(pattern="yyyy-MM-dd")
-    private Date faculty_birthdate;
+    private Date facultyBirthdate;
 
-    @Column(name="faculty_email_id")
-    private String faculty_email_id;
+    @Column(name="facultyEmailId")
+    private String facultyEmailId;
 
     public int getId() {
         return id;
@@ -40,77 +40,77 @@ public class FacultyPojoDBMapping {
         this.id = id;
     }
 
-    public String getFaculty_name() {
-        return faculty_name;
+    public String getFacultyName() {
+        return facultyName;
     }
 
-    public void setFaculty_name(String faculty_name) {
-        this.faculty_name = faculty_name;
+    public void setFacultyName(String facultyName) {
+        this.facultyName = facultyName;
     }
 
-    public String getFaculty_address() {
-        return faculty_address;
+    public String getFacultyAddress() {
+        return facultyAddress;
     }
 
-    public void setFaculty_address(String faculty_address) {
-        this.faculty_address = faculty_address;
+    public void setFacultyAddress(String facultyAddress) {
+        this.facultyAddress = facultyAddress;
     }
 
-    public long getFaculty_contact() {
-        return faculty_contact;
+    public long getFacultyContact() {
+        return facultyContact;
     }
 
-    public void setFaculty_contact(long faculty_contact) {
-        this.faculty_contact = faculty_contact;
+    public void setFacultyContact(long facultyContact) {
+        this.facultyContact = facultyContact;
     }
 
-    public long getFaculty_aadhar_no() {
-        return faculty_aadhar_no;
+    public long getFacultyAadharNo() {
+        return facultyAadharNo;
     }
 
-    public void setFaculty_aadhar_no(long faculty_aadhar_no) {
-        this.faculty_aadhar_no = faculty_aadhar_no;
+    public void setFacultyAadharNo(long facultyAadharNo) {
+        this.facultyAadharNo = facultyAadharNo;
     }
 
-    public Date getFaculty_birthdate() {
-        return faculty_birthdate;
+    public Date getFacultyBirthdate() {
+        return facultyBirthdate;
     }
 
-    public void setFaculty_birthdate(Date faculty_birthdate) {
-        this.faculty_birthdate = faculty_birthdate;
+    public void setFacultyBirthdate(Date facultyBirthdate) {
+        this.facultyBirthdate = facultyBirthdate;
     }
 
-    public String getFaculty_email_id() {
-        return faculty_email_id;
+    public String getFacultyEmailId() {
+        return facultyEmailId;
     }
 
-    public void setFaculty_email_id(String faculty_email_id) {
-        this.faculty_email_id = faculty_email_id;
+    public void setFacultyEmailId(String facultyEmailId) {
+        this.facultyEmailId = facultyEmailId;
     }
     public FacultyPojoDBMapping(){
 
     }
 
-    public FacultyPojoDBMapping(int id, String faculty_name, String faculty_address, long faculty_contact, long faculty_aadhar_no, Date faculty_birthdate, String faculty_email_id) {
+    public FacultyPojoDBMapping(int id, String facultyName, String facultyAddress, long facultyContact, long facultyAadharNo, Date facultyBirthdate, String facultyEmailId) {
         this.id = id;
-        this.faculty_name = faculty_name;
-        this.faculty_address = faculty_address;
-        this.faculty_contact = faculty_contact;
-        this.faculty_aadhar_no = faculty_aadhar_no;
-        this.faculty_birthdate = faculty_birthdate;
-        this.faculty_email_id = faculty_email_id;
+        this.facultyName = facultyName;
+        this.facultyAddress = facultyAddress;
+        this.facultyContact = facultyContact;
+        this.facultyAadharNo = facultyAadharNo;
+        this.facultyBirthdate = facultyBirthdate;
+        this.facultyEmailId = facultyEmailId;
     }
 
     @Override
     public String toString() {
-        return "Faculty_details{" +
+        return "FacultyDetails{" +
                 "id=" + id +
-                ", faculty_name='" + faculty_name + '\'' +
-                ", faculty_address='" + faculty_address + '\'' +
-                ", faculty_contact=" + faculty_contact +
-                ", faculty_aadhar_no=" + faculty_aadhar_no +
-                ", faculty_birthdate=" + faculty_birthdate +
-                ", faculty_email_id='" + faculty_email_id + '\'' +
+                ", facultyName='" + facultyName + '\'' +
+                ", facultyAddress='" + facultyAddress + '\'' +
+                ", facultyContact=" + facultyContact +
+                ", facultyAadharNo=" + facultyAadharNo +
+                ", facultyBirthdate=" + facultyBirthdate +
+                ", facultyEmailId='" + facultyEmailId + '\'' +
                 '}';
     }
 }
