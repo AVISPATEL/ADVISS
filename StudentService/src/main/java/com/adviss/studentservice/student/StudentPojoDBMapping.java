@@ -6,37 +6,37 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="student_details")
+@Table(name="studentDetails")
 public class StudentPojoDBMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
-    @Column(name="student_name")
-    private String student_name;
+    @Column(name="studentName")
+    private String studentName;
 
     @Column(name="address")
     private String address;
 
-    @Column(name="student_contact")
-    private long student_contact;
+    @Column(name="studentContact")
+    private long studentContact;
 
-    @Column(name="student_aadhar_no")
-    private long student_aadhar_no;
+    @Column(name="studentAadharNo")
+    private long studentAadharNo;
 
-    @Column(name="d_O_b")
+    @Column(name="dOB")
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date birthday;
 
-    @Column(name="enrollment_no")
-    private String enrollment_no;
+    @Column(name="enrollmentNo")
+    private String enrollmentNo;
 
-    @Column(name="student_email_id")
-    private String student_email_id;
+    @Column(name="studentEmailId")
+    private String studentEmailId;
 
     public StudentPojoDBMapping(){
-        
+
     }
     public int getId() {
         return id;
@@ -46,12 +46,12 @@ public class StudentPojoDBMapping {
         this.id = id;
     }
 
-    public String getStudent_name() {
-        return student_name;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setStudent_name(String student_name) {
-        this.student_name = student_name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getAddress() {
@@ -62,20 +62,20 @@ public class StudentPojoDBMapping {
         this.address = address;
     }
 
-    public long getStudent_contact() {
-        return student_contact;
+    public long getStudentContact() {
+        return studentContact;
     }
 
-    public void setStudent_contact(long student_contact) {
-        this.student_contact = student_contact;
+    public void setStudentContact(long studentContact) {
+        this.studentContact = studentContact;
     }
 
-    public long getStudent_aadhar_no() {
-        return student_aadhar_no;
+    public long getStudentAadharNo() {
+        return studentAadharNo;
     }
 
-    public void setStudent_aadhar_no(long student_aadhar_no) {
-        this.student_aadhar_no = student_aadhar_no;
+    public void setStudentAadharNo(long studentAadharNo) {
+        this.studentAadharNo = studentAadharNo;
     }
 
     public Date getBirthday() {
@@ -86,44 +86,44 @@ public class StudentPojoDBMapping {
         this.birthday = birthday;
     }
 
-    public String getEnrollment_no() {
-        return enrollment_no;
+    public String getEnrollmentNo() {
+        return enrollmentNo;
     }
 
-    public void setEnrollment_no(String enrollment_no) {
-        this.enrollment_no = enrollment_no;
+    public void setEnrollmentNo(String enrollmentNo) {
+        this.enrollmentNo = enrollmentNo;
     }
 
-    public String getStudent_email_id() {
-        return student_email_id;
+    public String getStudentEmailId() {
+        return studentEmailId;
     }
 
-    public void setStudent_email_id(String student_email_id) {
-        this.student_email_id = student_email_id;
+    public void setStudentEmailId(String studentEmailId) {
+        this.studentEmailId = studentEmailId;
     }
 
-    public StudentPojoDBMapping(int id, String student_name, String address, long student_contact, long student_aadhar_no, Date birthday, String enrollment_no, String student_email_id) {
+    public StudentPojoDBMapping(int id, String studentName, String address, long studentContact, long studentAadharNo, Date birthday, String enrollmentNo, String studentEmailId) {
         this.id = id;
-        this.student_name = student_name;
+        this.studentName = studentName;
         this.address = address;
-        this.student_contact = student_contact;
-        this.student_aadhar_no = student_aadhar_no;
+        this.studentContact = studentContact;
+        this.studentAadharNo = studentAadharNo;
         this.birthday = birthday;
-        this.enrollment_no = enrollment_no;
-        this.student_email_id = student_email_id;
+        this.enrollmentNo = enrollmentNo;
+        this.studentEmailId = studentEmailId;
     }
 
     @Override
     public String toString() {
-        return "Student_details{" +
+        return "StudentDetails{" +
                 "id=" + id +
-                ", student_name='" + student_name + '\'' +
+                ", studentName='" + studentName + '\'' +
                 ", address='" + address + '\'' +
-                ", student_contact=" + student_contact +
-                ", student_aadhar_no=" + student_aadhar_no +
+                ", studentContact=" + studentContact +
+                ", studentAadharNo=" + studentAadharNo +
                 ", birthday=" + birthday +
-                ", enrollment_no='" + enrollment_no + '\'' +
-                ", student_email_id='" + student_email_id + '\'' +
+                ", enrollmentNo='" + enrollmentNo + '\'' +
+                ", studentEmailId='" + studentEmailId + '\'' +
                 '}';
     }
 }

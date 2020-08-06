@@ -7,15 +7,8 @@ import java.util.List;
 
 @Service
 public interface SchoolServiceInterface {
-
     List<SchoolPojoDBMapping> findAll();
-
-    void  save(SchoolPojoDBMapping theSchool);
-
-    void  deleteById(int id);
-
+    void save(SchoolPojoDBMapping theSchool);
+    void deleteById(int id);
     SchoolPojoDBMapping findAll(int id);
-
-
-
 }
