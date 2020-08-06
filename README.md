@@ -1,2 +1,6 @@
 # ADVISS
-Advance digital vision inspection system
+Advance digital vision inspection system.
+
+# Dependencies
+
+# Setup
