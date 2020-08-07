@@ -21,6 +21,11 @@ dependencies {
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.3.2.RELEASE'
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
 	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.19.Final'
+	runtime group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Hoxton.SR6', ext: 'pom'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.2.4.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.2.4.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.2.4.RELEASE'
+
 }
 
 test {
