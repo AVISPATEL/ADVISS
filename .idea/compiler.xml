@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="ClerkService" target="1.8" />
+      <module name="ClerkService_main" target="1.8" />
+      <module name="ClerkService_test" target="1.8" />
+      <module name="StudentService" target="1.8" />
+      <module name="StudentService_main" target="1.8" />
+      <module name="StudentService_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
