@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="clerkDetails")
+@Table(name="clerkdetails")
 public class ClerkPojoDBMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class ClerkPojoDBMapping {
     @Column(name="clerkAadharNo")
     private long clerkAadharNo;
 
-    @Column(name="DOB")
+    @Column(name="dOB")
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date clerkBirthdate;
 

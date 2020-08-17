@@ -14,4 +14,8 @@ public interface ClerkServiceInterface {
     void save(ClerkPojoDBMapping theFacultyDetails);
 
     void deleteById(int id);
+
+    int findUser(String emailId);
+
+
 }

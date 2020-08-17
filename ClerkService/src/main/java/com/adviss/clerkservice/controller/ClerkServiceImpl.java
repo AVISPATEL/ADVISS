@@ -40,4 +40,11 @@ public class ClerkServiceImpl implements ClerkServiceInterface {
     public void deleteById(int id) {
         clerkRepository.deleteById(id);
     }
+
+    @Override
+    public int findUser(String emailId) {
+        List<ClerkPojoDBMapping> theClerk=clerkRepository.findUser(emailId);
+        return theClerk.get(1).getId();
+
+    }
 }

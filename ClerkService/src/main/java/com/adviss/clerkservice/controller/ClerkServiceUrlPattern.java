@@ -12,7 +12,7 @@ import java.util.List;
 public class ClerkServiceUrlPattern {
     @Autowired
     private ClerkServiceInterface clerkDetailsService;
-
+    ClerkPojoDBMapping theClerk;
     public ClerkServiceUrlPattern(ClerkServiceInterface theClerkDetailsService){
         clerkDetailsService=theClerkDetailsService;
     }
@@ -49,4 +49,11 @@ public class ClerkServiceUrlPattern {
         clerkDetailsService.deleteById(id);
         return "delete sucessfully";
     }
+    @GetMapping("/signIn/{emailId}")
+    public ClerkPojoDBMapping findByEmail(@PathVariable(value = "emailId") String emailId){
+        int findClerk=clerkDetailsService.findUser(emailId);
+        theClerk=clerkDetailsService.findAll(findClerk);
+        return theClerk;
+    }
+
 }
