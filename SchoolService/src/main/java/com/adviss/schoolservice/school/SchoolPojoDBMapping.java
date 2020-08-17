@@ -38,7 +38,7 @@ public class SchoolPojoDBMapping {
     private String password;
 
     @Column(name="schoolEmailId")
-    private String emailId;
+    private String schoolEmailId;
 
     public SchoolPojoDBMapping(){
 
@@ -124,15 +124,15 @@ public class SchoolPojoDBMapping {
         this.password = password;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getSchoolEmailId() {
+        return schoolEmailId;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setSchoolEmailId(String schoolEmailId) {
+        this.schoolEmailId = schoolEmailId;
     }
 
-    public SchoolPojoDBMapping(int id, String schoolName, String address, int schoolCode, long schoolContact, String principalName, long principalContact, long aadharNo, String username, String password, String emailId) {
+    public SchoolPojoDBMapping(int id, String schoolName, String address, int schoolCode, long schoolContact, String principalName, long principalContact, long aadharNo, String username, String password, String schoolEmailId) {
         this.id=id;
         this.schoolName = schoolName;
         this.address = address;
@@ -143,7 +143,7 @@ public class SchoolPojoDBMapping {
         this.aadharNo = aadharNo;
         this.username = username;
         this.password = password;
-        this.emailId = emailId;
+        this.schoolEmailId = schoolEmailId;
     }
 
     @Override
@@ -158,7 +158,7 @@ public class SchoolPojoDBMapping {
                 ", aadharNo=" + aadharNo +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", emailId='" + emailId + '\'' +
+                ", emailId='" + schoolEmailId + '\'' +
                 '}';
     }
 }

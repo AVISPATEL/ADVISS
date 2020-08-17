@@ -56,8 +56,10 @@ public class StudentServiceUrlPattern {
     @GetMapping("/signIn/{emailId}")
     public StudentPojoDBMapping findByEmail(@PathVariable(value = "emailId") String emailId){
         int findStudent=studentDetailsService.findUser(emailId);
+        if(findStudent!=Integer.parseInt(null)){
         StudentPojoDBMapping theStudent=studentDetailsService.findAll(findStudent);
-        return theStudent;
+        return theStudent;}
+        return null;
     }
 
 }

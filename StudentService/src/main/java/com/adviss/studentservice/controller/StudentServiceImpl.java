@@ -46,8 +46,8 @@ public class StudentServiceImpl implements StudentServiceInterface {
 
     @Override
     public int findUser(String emailId) {
-        List<StudentPojoDBMapping> theStudent=studentRepository.findUser(emailId);
-        return theStudent.get(1).getId();
+        StudentPojoDBMapping theStudent=studentRepository.findUser(emailId);
+        return theStudent.getId();
 
     }
 }

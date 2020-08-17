@@ -44,8 +44,8 @@ public class FacultyServiceImpl implements FacultyServiceInterface {
 
     @Override
     public int findUser(String emailId) {
-        List<FacultyPojoDBMapping> theFaculty=facultyRepository.findUser(emailId);
-        return theFaculty.get(1).getId();
+        FacultyPojoDBMapping theFaculty=facultyRepository.findUser(emailId);
+        return theFaculty.getId();
 
     }
 }

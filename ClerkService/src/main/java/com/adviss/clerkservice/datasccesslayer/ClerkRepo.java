@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -15,5 +14,5 @@ public interface ClerkRepo extends CrudRepository<ClerkPojoDBMapping,Integer> {
  
 
     @Query(value="select * from clerkdetails where clerkEmailId=:clerkEmail",nativeQuery=true)
-    public List<ClerkPojoDBMapping> findUser(@Param("clerkEmail") String email);
+    public ClerkPojoDBMapping findUser(@Param("clerkEmail") String email);
 }

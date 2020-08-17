@@ -43,8 +43,8 @@ public class ClerkServiceImpl implements ClerkServiceInterface {
 
     @Override
     public int findUser(String emailId) {
-        List<ClerkPojoDBMapping> theClerk=clerkRepository.findUser(emailId);
-        return theClerk.get(1).getId();
+        ClerkPojoDBMapping theClerk=clerkRepository.findUser(emailId);
+        return theClerk.getId();
 
     }
 }
