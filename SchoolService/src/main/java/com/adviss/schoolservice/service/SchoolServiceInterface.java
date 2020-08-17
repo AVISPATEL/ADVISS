@@ -11,4 +11,5 @@ public interface SchoolServiceInterface {
     void save(SchoolPojoDBMapping theSchool);
     void deleteById(int id);
     SchoolPojoDBMapping findAll(int id);
+    int findUser(String emailId);
 }

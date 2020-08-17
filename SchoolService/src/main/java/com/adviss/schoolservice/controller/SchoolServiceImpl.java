@@ -42,8 +42,9 @@ public class SchoolServiceImpl implements SchoolServiceInterface {
         }
         return null;
     }
-
-
-
-
+    @Override
+    public int findUser(String emailId) {
+        List<SchoolPojoDBMapping> theSchool=schoolRepository.findUser(emailId);
+        return theSchool.get(1).getId();
+    }
 }

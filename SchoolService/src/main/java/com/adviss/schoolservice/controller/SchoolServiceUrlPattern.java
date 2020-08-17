@@ -11,23 +11,21 @@ import java.util.List;
 public class SchoolServiceUrlPattern {
 
     @Autowired
-    private SchoolServiceInterface schoolDetailsService1;
-
-
+    private SchoolServiceInterface schoolDetailsService;
 
     public SchoolServiceUrlPattern(SchoolServiceInterface theSchoolDetailsService1){
-        schoolDetailsService1=theSchoolDetailsService1;
+        schoolDetailsService=theSchoolDetailsService1;
     }
 
     @GetMapping("/list")
     public List<SchoolPojoDBMapping> schoolDetailsList(){
-        List<SchoolPojoDBMapping> all = schoolDetailsService1.findAll();
+        List<SchoolPojoDBMapping> all = schoolDetailsService.findAll();
         return all;
     }
 
     @GetMapping("/list/{id}")
     public SchoolPojoDBMapping findbyId(@PathVariable int id){
-        SchoolPojoDBMapping theSchoolDetails=schoolDetailsService1.findAll(id);
+        SchoolPojoDBMapping theSchoolDetails=schoolDetailsService.findAll(id);
         if(theSchoolDetails==null) {
             throw new RuntimeException();
         }
@@ -36,24 +34,30 @@ public class SchoolServiceUrlPattern {
 
     @PostMapping("/list")
     public String create(@RequestBody SchoolPojoDBMapping theSchoolDetails){
-        schoolDetailsService1.save(theSchoolDetails);
+        schoolDetailsService.save(theSchoolDetails);
         return "created sucessfully";
     }
 
     @PutMapping("/list")
     public String update(@RequestBody SchoolPojoDBMapping theSchoolDetails){
-        schoolDetailsService1.save(theSchoolDetails);
+        schoolDetailsService.save(theSchoolDetails);
         return "updated sucessfully";
     }
 
     @DeleteMapping("/list/{id}")
     public String delete(@PathVariable int id){
-        SchoolPojoDBMapping theSchoolDetails=schoolDetailsService1.findAll(id);
+        SchoolPojoDBMapping theSchoolDetails=schoolDetailsService.findAll(id);
         if(theSchoolDetails==null){
             throw new RuntimeException();
         }
-        schoolDetailsService1.deleteById(id);
+        schoolDetailsService.deleteById(id);
         return "Deleted sucessfully";
     }
 
+    @GetMapping("/signIn/{emailId}")
+    public SchoolPojoDBMapping findByEmail(@PathVariable(value = "emailId") String emailId){
+        int findSchool=schoolDetailsService.findUser(emailId);
+        SchoolPojoDBMapping theSchool=schoolDetailsService.findAll(findSchool);
+        return theSchool;
+    }
 }
