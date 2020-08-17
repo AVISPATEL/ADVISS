@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface ClerkRepo extends CrudRepository<ClerkPojoDBMapping,Integer> {
     Optional<ClerkPojoDBMapping> findAllById(int id);
-    ClerkPojoDBMapping findByClerkEmailId(String clerkEmailId);
+ 
 
     @Query(value="select * from clerkdetails where clerkEmailId=:clerkEmail",nativeQuery=true)
     public List<ClerkPojoDBMapping> findUser(@Param("clerkEmail") String email);

@@ -12,4 +12,5 @@ public interface FacultyServiceInterface {
     FacultyPojoDBMapping findAll(int id);
     void save(FacultyPojoDBMapping theFacultyDetails);
     void deleteById(int id);
+    int findUser(String emailId);
 }

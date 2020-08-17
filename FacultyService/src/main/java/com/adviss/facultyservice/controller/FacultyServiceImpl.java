@@ -41,4 +41,11 @@ public class FacultyServiceImpl implements FacultyServiceInterface {
     public void deleteById(int id) {
         facultyRepository.deleteById(id);
     }
+
+    @Override
+    public int findUser(String emailId) {
+        List<FacultyPojoDBMapping> theFaculty=facultyRepository.findUser(emailId);
+        return theFaculty.get(1).getId();
+
+    }
 }

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="facultyDetails")
+@Table(name="facultydetails")
 public class FacultyPojoDBMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

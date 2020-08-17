@@ -49,4 +49,10 @@ public class FacultyServiceUrlPattern {
         facultyDetailsService.deleteById(id);
         return "delete sucessfully";
     }
+    @GetMapping("/signIn/{emailId}")
+    public FacultyPojoDBMapping findByEmail(@PathVariable(value = "emailId") String emailId){
+        int findFaculty=facultyDetailsService.findUser(emailId);
+        FacultyPojoDBMapping theFaculty=facultyDetailsService.findAll(findFaculty);
+        return theFaculty;
+    }
 }
