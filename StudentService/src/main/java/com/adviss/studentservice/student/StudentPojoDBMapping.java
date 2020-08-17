@@ -16,8 +16,8 @@ public class StudentPojoDBMapping {
     @Column(name="studentName")
     private String studentName;
 
-    @Column(name="address")
-    private String address;
+    @Column(name="studentAddress")
+    private String studentAddress;
 
     @Column(name="studentContact")
     private long studentContact;
@@ -55,11 +55,11 @@ public class StudentPojoDBMapping {
     }
 
     public String getAddress() {
-        return address;
+        return studentAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
     }
 
     public long getStudentContact() {
@@ -102,10 +102,10 @@ public class StudentPojoDBMapping {
         this.studentEmailId = studentEmailId;
     }
 
-    public StudentPojoDBMapping(int id, String studentName, String address, long studentContact, long studentAadharNo, Date birthday, String enrollmentNo, String studentEmailId) {
+    public StudentPojoDBMapping(int id, String studentName, String studentAddress, long studentContact, long studentAadharNo, Date birthday, String enrollmentNo, String studentEmailId) {
         this.id = id;
         this.studentName = studentName;
-        this.address = address;
+        this.studentAddress = studentAddress;
         this.studentContact = studentContact;
         this.studentAadharNo = studentAadharNo;
         this.birthday = birthday;
@@ -118,7 +118,7 @@ public class StudentPojoDBMapping {
         return "StudentDetails{" +
                 "id=" + id +
                 ", studentName='" + studentName + '\'' +
-                ", address='" + address + '\'' +
+                ", address='" + studentAddress + '\'' +
                 ", studentContact=" + studentContact +
                 ", studentAadharNo=" + studentAadharNo +
                 ", birthday=" + birthday +

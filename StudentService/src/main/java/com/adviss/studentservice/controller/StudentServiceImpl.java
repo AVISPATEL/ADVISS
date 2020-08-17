@@ -43,4 +43,11 @@ public class StudentServiceImpl implements StudentServiceInterface {
     public void deleteById(int id) {
         studentRepository.deleteById(id);
     }
+
+    @Override
+    public int findUser(String emailId) {
+        List<StudentPojoDBMapping> theStudent=studentRepository.findUser(emailId);
+        return theStudent.get(1).getId();
+
+    }
 }

@@ -45,12 +45,19 @@ public class StudentServiceUrlPattern {
     }
 
     @DeleteMapping("/list/{id}")
-    public String deleteStudent(@PathVariable int id){
+    public String deleteStudent(@PathVariable int id) {
         StudentPojoDBMapping theStudentDetails = studentDetailsService.findAll(id);
-        if(theStudentDetails==null){
+        if (theStudentDetails == null) {
             throw new RuntimeException();
         }
         return "Deleted sucessfully";
+    }
+
+    @GetMapping("/signIn/{emailId}")
+    public StudentPojoDBMapping findByEmail(@PathVariable(value = "emailId") String emailId){
+        int findStudent=studentDetailsService.findUser(emailId);
+        StudentPojoDBMapping theStudent=studentDetailsService.findAll(findStudent);
+        return theStudent;
     }
 
 }
